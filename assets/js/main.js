@@ -26,8 +26,6 @@ function loadPokemonItens(offset, limit){
         .join('')
 
         pokemonList.innerHTML += newHtml
-
-
     })
 }
 
@@ -35,8 +33,7 @@ loadPokemonItens(offset, limit)
 
 loadMoreButton.addEventListener('click', () => {
     offset += limit
-    debugger
-
+    
     const qtRecordNextPage = offset + limit
 
     if (qtRecordNextPage >= maxRecords){
@@ -44,7 +41,6 @@ loadMoreButton.addEventListener('click', () => {
         loadPokemonItens(offset, newLimit)
 
         loadMoreButton.parentElement.removeChild(loadMoreButton)
-  
     }else{
         loadPokemonItens(offset, limit)
     }
