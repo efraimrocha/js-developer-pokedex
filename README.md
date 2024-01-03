@@ -15,9 +15,12 @@ Personalizações Técnicas: Adição de funcionalidades e melhorias técnicas u
 ## Screenshots
 
 Small Screen
-![miniam-screem](https://github.com/efraimrocha/js-developer-pokedex/assets/67542881/2fd85289-9c94-4204-8392-ee3d843b6d5d)
+
+![small-screem](https://github.com/efraimrocha/js-developer-pokedex/assets/67542881/a225d501-e05e-4b37-be33-14f97fb03cba)
+
 
 Full Screen
+
 ![full-screem](https://github.com/efraimrocha/js-developer-pokedex/assets/67542881/1a9ed4f7-b58f-4da4-b04f-acba08d58438)
 
 
