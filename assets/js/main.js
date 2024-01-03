@@ -1,58 +1,51 @@
 
-function convertPokemonTypesToLi(pokemonTypes){
-    return pokemonTypes.map((typeSlot) => `<li class="type">${typeSlot.type.name}</li>`)
-}
-
-function convertPokemonToLi(pokemon){
-    return `
-        <li class="pokemon">
-            <span class="number">#${pokemon.order}</span>
-            <span class="name">${pokemon.name}</span>
-
-            <div class="detail">
-                <ol class="types">
-                    ${convertPokemonTypesToLi(pokemon.types).join('')}
-                </ol>
-
-                <img src="${pokemon.sprites.other.dream_world.front_default}">
-            </div>
-        </li>
-    `
-}
-
 const pokemonList = document.getElementById('pokemonList')
+const loadMoreButton = document.getElementById('loadMoreButton')
+
+const maxRecords = 151
+let offset = 0
+let limit = 10
 
 
-pokeApi.getPokemons().then((pokemons = []) => {
-    pokemonList.innerHTML += pokemons.map(convertPokemonToLi).join('')
-})
+function loadPokemonItens(offset, limit){
+    pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
+        const newHtml = pokemons.map((pokemon) => `
+            <li class="pokemon ${pokemon.type}">
+                <span class="number">#${pokemon.number}</span>
+                <span class="name">${pokemon.name}</span>
+
+                <div class="detail">
+                    <ol class="types">
+                        ${pokemon.types.map((type) => `<li class="type ${pokemon.type}">${type}</li>`).join('')}
+                    </ol>
+
+                    <img src="${pokemon.photo}" alt="${pokemon.photo}">
+                </div>  
+            </li>
+        `) 
+        .join('')
+
+        pokemonList.innerHTML += newHtml
 
 
-function convertPokemonTypesToLi(pokemonTypes){
-    return pokemonTypes.map((typeSlot) => `<li class="type">${typeSlot.type.name}</li>`)
+    })
 }
 
-function convertPokemonToLi(pokemon){
-    return `
-        <li class="pokemon">
-            <span class="number">#${pokemon.order}</span>
-            <span class="name">${pokemon.name}</span>
+loadPokemonItens(offset, limit)
 
-            <div class="detail">
-                <ol class="types">
-                    ${convertPokemonTypesToLi(pokemon.types).join('')}
-                </ol>
+loadMoreButton.addEventListener('click', () => {
+    offset += limit
+    debugger
 
-                <img src="${pokemon.sprites.other.dream_world.front_default}">
-            </div>
-        </li>
-    `
-}
+    const qtRecordNextPage = offset + limit
 
-const pokemonList = document.getElementById('pokemonList')
+    if (qtRecordNextPage >= maxRecords){
+        let newLimit = maxRecords - offset
+        loadPokemonItens(offset, newLimit)
 
-
-pokeApi.getPokemons().then((pokemons = []) => {
-    pokemonList.innerHTML += pokemons.map(convertPokemonToLi).join('')
+        loadMoreButton.parentElement.removeChild(loadMoreButton)
+  
+    }else{
+        loadPokemonItens(offset, limit)
+    }
 })
-
