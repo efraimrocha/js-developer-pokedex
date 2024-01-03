@@ -1,20 +1,31 @@
 # Trilha JS Developer - Pokedex
 
+Deploy: https://efraimrocha.github.io/js-developer-pokedex/
+
 Bem-vindo ao repositório da Pokedex, resultado da minha implementação do fork do projeto fornecido pela Digital Innovation One como parte da Formação JavaScript Developer.
 
 ## Visão Geral
 Esta versão da Pokedex representa minha contribuição pessoal após forquear o projeto original. O objetivo continua sendo aplicar os conhecimentos adquiridos no curso de Protocolo HTTP e Integração com a PokeAPI, mas agora com melhorias e personalizações adicionadas ao projeto base.
 
 ## Conteúdo do Projeto
-Pokedex: A aplicação principal foi aprimorada com novos recursos e melhorias de usabilidade.
+Pokedex: A aplicação principal foi aprimorada com novos recursos, reponsividade emelhorias de usabilidade.
 Integração com PokeAPI: A integração foi otimizada para fornecer uma experiência mais eficiente e enriquecedora.
 Personalizações Técnicas: Adição de funcionalidades e melhorias técnicas utilizando JavaScript, HTML e CSS.
 
-Como Utilizar
+## Screenshots
+
+Small Screen
+![miniam-screem](https://github.com/efraimrocha/js-developer-pokedex/assets/67542881/2fd85289-9c94-4204-8392-ee3d843b6d5d)
+
+Full Screen
+![full-screem](https://github.com/efraimrocha/js-developer-pokedex/assets/67542881/1a9ed4f7-b58f-4da4-b04f-acba08d58438)
+
+
+## Como Utilizar
 
 Clone este repositório:
 
-`git clone https://github.com/[seu-username]/js-developer-pokedex.git`
+`git clone https://github.com/efraimrocha/js-developer-pokedex.git`
 
 Abra o arquivo index.html em seu navegador:
 
