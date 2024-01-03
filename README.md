@@ -14,20 +14,21 @@ Como Utilizar
 
 Clone este repositório:
 
-git clone https://github.com/[seu-username]/js-developer-pokedex.git
+`git clone https://github.com/[seu-username]/js-developer-pokedex.git`
 
 Abra o arquivo index.html em seu navegador:
 
-cd js-developer-pokedex
+`cd js-developer-pokedex`
 
 Em seguida, abra o arquivo index.html no seu navegador
 
-Contribuições
+## Contribuições
 Contribuições são encorajadas! Se encontrar bugs, problemas de usabilidade ou tiver sugestões de melhorias, sinta-se à vontade para abrir uma issue ou enviar um pull request.
 
-Colaborador
-[Efraim Rocha]
-Agradecimentos
+## Colaborador
+Efraim Rocha
+
+## Agradecimentos
 Agradeço à Digital Innovation One por fornecer a Formação JavaScript Developer, que serviu de base para esta implementação do fork da Pokedex.
 
 Aproveite a versão aprimorada da Pokedex JavaScript Developer! 🚀🔍
